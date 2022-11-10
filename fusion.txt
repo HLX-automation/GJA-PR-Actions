@@ -25,3 +25,13 @@ Assign a label to the pull request with the Jira issue type
 This makes it less labour intensive for a developer to create pull requests and adds more information for the people who need to e.g. review the requests.
 
 Sample action setup
+
+To get started, you will need to create a GitHub action workflow file. If you need more information on how to set that up, check here.
+
+In our repositories, we keep these actions in a separate workflow, so we usually add a file called .github/workflows/automation.yml to our repository and put the following content in there:
+
+The on: section defines when the workflow needs to run. We ussually run them on everything that has to do with a pull request. We also use workflow_dispatch to allow us to manually trigger the workflow.
+
+The only step which is there is the one that adds the Jira info.
+
+We strongly suggest to store the sensitive configuration parameters as secrets.
