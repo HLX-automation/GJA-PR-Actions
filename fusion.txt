@@ -10,3 +10,18 @@ Example Usage with a specific Project Key
   uses: ryanvade/enforce-pr-title-style-action@v1
   with:
     projectKey: GJA
+
+Add Jira info to a pull request
+At Contractify, we like to keeps things nice, tidy and organized. We are using Jira for our issue management and GitHub for our version control.
+
+Since we want to have more context with our pull requests, we decided to create a GitHub action which helps us in adding Jira data to the pull request.
+
+The current version allows you to:
+
+Detect Jira key from the branch name
+Add the Jira key as prefix to the pull request title if not present
+Add the Jira key and issue title to the pull request body if not present
+Assign a label to the pull request with the Jira issue type
+This makes it less labour intensive for a developer to create pull requests and adds more information for the people who need to e.g. review the requests.
+
+Sample action setup
